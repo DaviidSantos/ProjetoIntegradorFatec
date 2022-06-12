@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="Uno.Views.SolicitantesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uno.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1066">
+    <StackPanel>
+        <StackPanel Margin="68 57 68 0">
+            <TextBlock Text="Solicitantes"
+                           FontSize="32"
+                           FontWeight="SemiBold"
+                           Foreground="#161616"/>
+
+            <DataGrid Height="450"
+                      x:Name="SolicitantesDG"
+                      Margin="0 20 0 0"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False"
+                      IsSynchronizedWithCurrentItem="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Id Solicitante" Binding="{Binding idSolicitante}" Width="156"/>
+                    <DataGridTextColumn Header="Nome Solicitante" Binding="{Binding nomeSolicitante}" Width="254"/>
+                    <DataGridTextColumn Header="Nome Contato" Binding="{Binding nomeContato}" Width="254"/>
+                    <DataGridTextColumn Header="Email Contato" Binding="{Binding emailContato}" Width="254"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+        </StackPanel>
+        <Grid Margin="68 60 68 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Button Grid.Column="0"
+                    Margin="0 0 20 0"
+                    Content="Cadastrar Solicitante"
+                    x:Name="CadastrarSolicitanteBotao"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Background="#2659E7"
+                    BorderBrush="Transparent">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Grid.Column="1"
+                    x:Name="Editar"
+                    Margin="20 0 0 0"
+                    Content="Editar Solicitante"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Background="#2659E7"
+                    BorderBrush="Transparent">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Grid.Column="2"
+                    Margin="20 0 0 0"
+                    Content="Excluir Solicitante"
+                    x:Name="Excluir"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    Foreground="White"
+                    Background="#F01D25"
+                    BorderBrush="Transparent">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+    </StackPanel>
+</UserControl>

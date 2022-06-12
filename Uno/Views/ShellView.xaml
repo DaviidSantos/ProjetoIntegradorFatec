@@ -1,0 +1,85 @@
+﻿<Window x:Class="Uno.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Uno.Views"
+        mc:Ignorable="d" WindowState="Maximized"
+        Title="Uno" Height="768" Width="1366">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Background="#F9F9F9">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="../Icons/Logo.png" Height="40" Width="40"
+                       HorizontalAlignment="Left" VerticalAlignment="Top"
+                       Margin="30 25 0 0"/>
+
+                <StackPanel Grid.Row="1" Margin="30 0 0 0">
+                    <RadioButton Content="Análises"
+                                 IsChecked="True"
+                                 x:Name="Analises"
+                                 Style="{StaticResource MenuTheme}"/>
+
+                    <RadioButton Content="Solicitação de Análise"
+                                 x:Name="SolicitacaoAnalise"
+                                 Style="{StaticResource MenuTheme}"/>
+
+                    <RadioButton Content="Recebimento de Amostras"
+                                 x:Name="RecebimentoAmostras"
+                                 Style="{StaticResource MenuTheme}"/>
+
+                    <RadioButton Content="Amostras"
+                                 x:Name="Amostras"
+                                 Style="{StaticResource MenuTheme}"/>
+                    <RadioButton Content="Solicitantes"
+                                 x:Name="Solicitantes"
+                                 Style="{StaticResource MenuTheme}"/>
+                    
+                    
+                    <RadioButton Content="Usuarios"
+                                 x:Name="Usuarios"
+                                 Style="{StaticResource MenuTheme}"/>
+
+                    <RadioButton Content="Resultados"
+                                 x:Name="Resultados"
+                                 Style="{StaticResource MenuTheme}"/>
+                    <RadioButton Content="Consulta Resultados"
+                                 x:Name="ConsultaResultados"
+                                 Style="{StaticResource MenuTheme}"/>
+                    <RadioButton Content="Baixa"
+                                 x:Name="Baixa"
+                                 Style="{StaticResource MenuTheme}"/>
+                </StackPanel>
+
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="30">
+                    <Image Source="../Icons/UserIcon.png" Width="42"/>
+                    <StackPanel>
+                        <TextBlock x:Name="Nome"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"
+                                   Margin="3 0 0 0"
+                                   Foreground="#A7A6A7"/>
+
+                        <TextBlock x:Name="Cargo"
+                                   FontSize="14"
+                                   FontWeight="Regular"
+                                   Margin="3 0 0 0"
+                                   Foreground="#A7A6A7"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+            <ContentControl Grid.Column="1" x:Name="TelaSelecionada"/>
+        </Grid>
+    </Grid>
+</Window>

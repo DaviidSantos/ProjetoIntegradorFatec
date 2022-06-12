@@ -1,0 +1,236 @@
+﻿<UserControl x:Class="Uno.Views.RecebimentoAmostrasView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uno.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1066">
+    <StackPanel Margin="168 45 168 0">
+        <TextBlock Text="Recebimento de Amostras"
+                       FontSize="30"
+                       FontWeight="SemiBold"
+                       Foreground="#161616"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="5 30 5 0">
+                <TextBlock Text="Id Solicitante"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <TextBox Margin="5 20 5 0"
+                         x:Name="IdSolicitante"
+                             Padding="7"
+                             BorderBrush="#A7A6A7">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Margin="5 30 5 0">
+                <TextBlock Text="Numero SA"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <TextBox Margin="5 20 5 0"
+                         x:Name="NumSA"
+                             Padding="7"
+                             BorderBrush="#A7A6A7">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="0" Grid.Column="2" Margin="5 30 5 0">
+                <TextBlock Text="Data de Recebimento"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <DatePicker Margin="5 20 5 0"
+                            x:Name="DataRecebimento"
+                                Padding="6"
+                                BorderBrush="#A7A6A7">
+                    <DatePicker.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="0" Margin="5 30 5 0">
+                <TextBlock Text="Data de Identificação"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <DatePicker Margin="5 20 5 0"
+                            x:Name="DataIdentificacao"
+                             Padding="6"
+                             BorderBrush="#A7A6A7">
+                    <DatePicker.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="2" Margin="5 30 5 0">
+                <TextBlock Text="Nota Fiscal"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <TextBox Margin="5 20 0 0"
+                             Padding="7"
+                         x:Name="NotaFiscal"
+                             BorderBrush="#A7A6A7">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="1" Margin="5 30 5 0">
+                <TextBlock Text="Tipo"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <TextBox Margin="5 20 5 0"
+                             Padding="7"
+                         x:Name="Tipo"
+                             BorderBrush="#A7A6A7">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="2" Grid.Column="0" Margin="5 30 5 0">
+                <TextBlock Text="Lote"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <TextBox Margin="5 20 5 0"
+                             Padding="7"
+                         x:Name="Lote"
+                             BorderBrush="#A7A6A7">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Grid.Column="1" Margin="5 30 5 0">
+                <TextBlock Text="Validade"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <DatePicker Margin="5 20 5 0"
+                                Padding="6"
+                            x:Name="Validade"
+                                BorderBrush="#A7A6A7">
+                    <DatePicker.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </DatePicker.Resources>
+                </DatePicker>
+            </StackPanel>
+
+            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="5 30 5 0">
+                <TextBlock Text="Descrição"
+                               FontSize="20"
+                               FontWeight="SemiBold"
+                               Foreground="#2659E7"/>
+                <TextBox Margin="5 20 5 0"
+                             Padding="7"
+                         x:Name="Descricao"
+                             BorderBrush="#A7A6A7"
+                             Height="150"
+                             TextWrapping="Wrap"
+                             AcceptsReturn="True"
+                             AcceptsTab="True"
+                             SpellCheck.IsEnabled="True">
+                    <TextBox.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="4"/>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </StackPanel>
+        </Grid>
+
+        <Grid >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                    x:Name="Cadastrar"
+                        Margin="0 0 20 0"
+                        Content="Cadastrar"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Foreground="White"
+                        Background="#2659E7"
+                        BorderBrush="Transparent">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Grid.Row="1" Grid.Column="2"
+                        Grid.ColumnSpan="2"
+                        Margin="20 0 0 0"
+                    x:Name="Cancelar"
+                        Content="Cancelar"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Foreground="White"
+                        Background="#2659E7"
+                        BorderBrush="Transparent">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </StackPanel>
+</UserControl>

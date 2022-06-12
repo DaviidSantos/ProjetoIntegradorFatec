@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="Uno.Views.ConsultaResultadosView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uno.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="768" d:DesignWidth="1066">
+    <Grid>
+        <StackPanel>
+            <StackPanel Margin="68 57 68 0">
+                <TextBlock Text="Resultados"
+                       FontSize="32"
+                       FontWeight="SemiBold"
+                       Foreground="#161616"/>
+
+                <DataGrid
+                    x:Name="ResultadosDG"
+                      Height="450"
+                      Margin="0 20 0 0"
+                      IsReadOnly="True"
+                      AutoGenerateColumns="False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="SA" Binding="{Binding numSA}" Width="*"/>
+                        <DataGridTextColumn Header="Tipo de estudo" Binding="{Binding tipoDeEstudo}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+
+
+            <Grid Margin="68 0 68 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Button Grid.Row="1" Grid.Column="0"
+                        Grid.ColumnSpan="2"
+                    x:Name="Excluir"
+                        Margin="0 0 20 0"
+                        Content="Excluir"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Foreground="White"
+                        Background="#F01D25"
+                        BorderBrush="Transparent">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Grid.Row="1" Grid.Column="2"
+                        Grid.ColumnSpan="2"
+                        Margin="20 0 0 0"
+                        Content="Detalhes"
+                        x:Name="Detalhes"
+                        FontSize="20"
+                        FontWeight="SemiBold"
+                        Foreground="White"
+                        Background="#2659E7"
+                        BorderBrush="Transparent">
+                    <Button.Resources>
+                        <Style TargetType="{x:Type Border}">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</UserControl>
