@@ -44,8 +44,8 @@
                     <RadioButton Content="Solicitantes"
                                  x:Name="Solicitantes"
                                  Style="{StaticResource MenuTheme}"/>
-                    
-                    
+
+
                     <RadioButton Content="Usuarios"
                                  x:Name="Usuarios"
                                  Style="{StaticResource MenuTheme}"/>
@@ -59,23 +59,6 @@
                     <RadioButton Content="Baixa"
                                  x:Name="Baixa"
                                  Style="{StaticResource MenuTheme}"/>
-                </StackPanel>
-
-                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="30">
-                    <Image Source="../Icons/UserIcon.png" Width="42"/>
-                    <StackPanel>
-                        <TextBlock x:Name="Nome"
-                                   FontSize="16"
-                                   FontWeight="SemiBold"
-                                   Margin="3 0 0 0"
-                                   Foreground="#A7A6A7"/>
-
-                        <TextBlock x:Name="Cargo"
-                                   FontSize="14"
-                                   FontWeight="Regular"
-                                   Margin="3 0 0 0"
-                                   Foreground="#A7A6A7"/>
-                    </StackPanel>
                 </StackPanel>
             </Grid>
 
